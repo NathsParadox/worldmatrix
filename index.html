@@ -3,106 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the concept of reality and question what is real. A deep dive into philosophical questions, scientific theories, and collective memory.">
-    <title>What If Nothing Is Real?</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Is Reality an Illusion?</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://source.unsplash.com/random/1600x900?matrix,simulation') no-repeat center center/cover;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: glitch 2s infinite;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        header button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #000;
+            background: #0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        header button:hover {
+            background: #0c0;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px cyan; }
+            100% { text-shadow: 2px 2px red; }
+        }
+
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .interactive {
+            margin: 50px 0;
+        }
+
+        .interactive img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .philosophical-quotes {
+            background: #111;
+            color: #0f0;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .philosophical-quotes blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            border-left: 4px solid #0f0;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        .cta {
+            padding: 80px 20px;
+            background: #222;
+        }
+
+        .cta h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #0f0;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta a:hover {
+            background: #0c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: #0f0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>What If Nothing Is Real?</h1>
-            <p class="intro-text">Explore the unknown with us. Question everything.</p>
-            <button class="cta-button" onclick="startJourney()">Begin the Journey</button>
+    <header>
+        <div>
+            <h1>Is Reality an Illusion?</h1>
+            <p>What if the life you’re living is not the truth but a carefully constructed mirage?</p>
+            <button>Enter the Unknown</button>
         </div>
-        <div id="glitch-animation"></div>
-    </section>
+    </header>
 
-    <!-- Philosophical Exploration -->
-    <section id="philosophical-exploration">
-        <h2>Philosophical Exploration</h2>
-        <p>What defines reality? Are we all prisoners of perception? Dive into classical thought and modern philosophy.</p>
-        <div class="topics">
-            <div class="topic-card">
-                <h3>The Ship of Theseus</h3>
-                <p>What defines identity if every part is replaced?</p>
-            </div>
-            <div class="topic-card">
-                <h3>Plato's Allegory of the Cave</h3>
-                <p>Are we all prisoners of perception?</p>
-            </div>
-            <div class="topic-card">
-                <h3>Descartes' "I think, therefore I am"</h3>
-                <p>Is thinking proof of existence or part of the illusion?</p>
-            </div>
+    <section>
+        <h2>Stories That Challenge What You Know</h2>
+        <p>
+            Explore tales of the mysterious and unexplainable:
+        </p>
+        <div class="interactive">
+            <h3>The Man Who Woke Up Twice</h3>
+            <p>A tale of someone living in a simulation, waking up in a "real" world only to discover it was another simulation.</p>
+            <h3>The Mandela Effect Mystery</h3>
+            <p>Discover famous examples of collective false memories, like the spelling of “Berenstain Bears” or “Looney Tunes.”</p>
         </div>
     </section>
 
-    <!-- The Science of Reality -->
-    <section id="science-of-reality">
-        <h2>The Science of Reality</h2>
-        <p>What does quantum physics say about our perception of reality?</p>
-        <div class="topics">
-            <div class="topic-card">
-                <h3>Quantum Mechanics</h3>
-                <p>Does the observer create reality?</p>
-            </div>
-            <div class="topic-card">
-                <h3>The Holographic Universe</h3>
-                <p>Is the cosmos a 2D projection?</p>
-            </div>
-            <div class="topic-card">
-                <h3>Simulation Hypothesis</h3>
-                <p>Could we be living in a computer program?</p>
-            </div>
-        </div>
+    <section class="philosophical-quotes">
+        <blockquote>
+            "Reality is merely an illusion, albeit a very persistent one." – Albert Einstein
+        </blockquote>
+        <blockquote>
+            "Have you ever had a dream, Neo, that you were so sure was real?" – Morpheus, The Matrix
+        </blockquote>
     </section>
 
-    <!-- The Mandela Effect -->
-    <section id="mandela-effect">
-        <h2>The Mandela Effect and Collective Memory</h2>
-        <p>Why do so many people misremember the same things? What does it say about the nature of our collective reality?</p>
-        <div class="topics">
-            <div class="topic-card">
-                <h3>Berenstain Bears</h3>
-                <p>Did you remember it as "Berenstein"? You're not alone.</p>
-            </div>
-            <div class="topic-card">
-                <h3>Monopoly Man's Missing Monocle</h3>
-                <p>Does he actually wear one?</p>
-            </div>
-        </div>
+    <section>
+        <h2>What Does Science Say?</h2>
+        <p>
+            Could quantum mechanics suggest the universe is a hologram? Explore questions like:
+        </p>
+        <ul>
+            <li>Is the observer effect proof that consciousness shapes reality?</li>
+            <li>How does brain neuroplasticity influence perception?</li>
+        </ul>
     </section>
 
-    <!-- Stories That Make You Question Everything -->
-    <section id="stories">
-        <h2>Stories That Make You Question Everything</h2>
-        <p>Real-life accounts and urban legends that hint at parallel worlds and glitches in the matrix.</p>
-        <div class="stories">
-            <p>Anecdotes of people who have experienced time slips or lived in alternate realities.</p>
-        </div>
-    </section>
+    <div class="cta">
+        <h3>Dare to Question Reality</h3>
+        <a href="#">Explore More Theories</a>
+    </div>
 
-    <!-- Thought Experiments & Quizzes -->
-    <section id="quizzes">
-        <h2>Thought Experiments & Quizzes</h2>
-        <p>What reality are you living in? Take the quiz and find out!</p>
-        <button onclick="takeQuiz()">Take the Quiz</button>
-    </section>
-
-    <!-- Community & Interaction -->
-    <section id="community">
-        <h2>Join the Discussion</h2>
-        <p>Share your theories and experiences. What if everything you know is just a construct?</p>
-        <button onclick="joinDiscussion()">Join the Conversation</button>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Reality Quest. All rights reserved.</p>
+        <p>
+            &copy; 2025 The Reality Questioning Society. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
