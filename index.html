@@ -3,27 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Screen Video on Repeat</title>
+    <title>Question Your Reality</title>
     <style>
         body {
             margin: 0;
-            padding: 0;
-            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
         }
-        video {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
+
+        header {
+            position: relative;
             height: 100vh;
-            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://source.unsplash.com/random/1600x900?space,universe') no-repeat center center/cover;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: glitch 2s infinite;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px cyan; }
+            100% { text-shadow: 2px 2px red; }
+        }
+
+        section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .philosophical-quotes {
+            background: #111;
+            color: #0f0;
+            padding: 50px;
+            text-align: left;
+        }
+
+        .philosophical-quotes blockquote {
+            font-size: 1.5rem;
+            font-style: italic;
+            border-left: 4px solid #0f0;
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        .cta {
+            padding: 80px 20px;
+            background: #222;
+        }
+
+        .cta h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #0f0;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .cta a:hover {
+            background: #0c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        footer a {
+            color: #0f0;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="https://youtu.be/lb5o6nY8rRs">
-        Your browser does not support the video tag.
-    </video>
+    <header>
+        <div>
+            <h1>Is This Real?</h1>
+            <p>Or is it all just an illusion?</p>
+        </div>
+    </header>
+
+    <section>
+        <h2>What if Everything You Know is a Lie?</h2>
+        <p>
+            Think about the reality you experience every day. What if the rules of the universe, the people you meet, the objects you interact with—what if they were all part of a simulation? A carefully crafted illusion?
+        </p>
+    </section>
+
+    <section class="philosophical-quotes">
+        <blockquote>
+            "Reality is merely an illusion, albeit a very persistent one." – Albert Einstein
+        </blockquote>
+        <blockquote>
+            "Have you ever had a dream, Neo, that you were so sure was real? What if you were unable to wake from that dream?" – Morpheus, The Matrix
+        </blockquote>
+    </section>
+
+    <section>
+        <h2>Signs You Might Be in a Simulation</h2>
+        <p>
+            Have you noticed glitches in your surroundings? Déjà vu? People or objects behaving in ways that defy explanation? The sensation that something is watching you? These could all be signs that reality is not as it seems.
+        </p>
+    </section>
+
+    <div class="cta">
+        <h3>Want to Wake Up?</h3>
+        <a href="#">Click Here to Learn More</a>
+    </div>
+
+    <footer>
+        <p>
+            &copy; 2025 The Reality Questioning Society. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </p>
+    </footer>
 </body>
 </html>
